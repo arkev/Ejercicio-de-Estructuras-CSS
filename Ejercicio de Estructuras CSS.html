@@ -4,13 +4,13 @@
 	<meta charset="UTF-8">
 	</head>
 	<body><header>
-		<h1>Estructura con Posicion Absoluta</h1>
+		<h1>Estructura Float</h1>
 	</header>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<style>
 		body{
 			background: lightgray;
-			margin: 0 0 100px;
+			margin: 0;
 			padding: 0;
 			font-family: 'Montserrat' ;
 
@@ -18,6 +18,7 @@
 		header, section, nav, article, footer{
 			padding: 15px;
 			margin: 15px;
+			display: block;
 
 		}
 		header{
@@ -30,39 +31,49 @@
 		}
 		nav{
 			background: yellow;
-			position: absolute;
-			left: 0px;
-			width: 200px;
+			float: left;
+			width: 30%;
+		}
+		.contenedor {
+			float: left;
+			width: 60%;
 		}
 		article{
 			background: red;
-			margin-left: 250px;
 
 		}
 		footer{
 			background: orange;
 			text-align: center;
-			position: fixed;
-			bottom: 0;
-			left: 0;
 			height: 70px;
 			width: 100%;
 			margin: 0;
 		}
+		.clearfix{
+			overflow: auto;
+
+		}
+		.after-box {
+			clear: both;
+		}
+		*{
+			box-sizing: border-box;
+		}
 
 
 	</style>
-	<section>
+	<section class="clearfix">
 		<nav><ul>
 			<li>INICIO</li>
 			<li>NOSOTROS</li>
 			<li>SERVICIOS</li>
 			<li>CONTACTO</li>
 		</ul></nav>
+		<div class="contenedor">
 		<article>
 			<h2>Articulo 1</h2>
 				<p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
-			</article>
+		</article>
 		<article>
 			<h2>Articulo 2</h2>
 			    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -70,7 +81,7 @@
 		<article>
 			<h2>Articulo 3</h2>
 				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</article>
+		</article> </div>
 	</section>
 	</body>
 	<footer>© 2020 Todos los derechos Reservados</footer>
