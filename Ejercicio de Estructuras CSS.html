@@ -7,6 +7,7 @@
 		<h1>Estructura Float</h1>
 	</header>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width-device-width">
 	<style>
 		body{
 			background: lightgray;
@@ -31,12 +32,9 @@
 		}
 		nav{
 			background: yellow;
-			float: left;
-			width: 30%;
 		}
 		.contenedor {
-			float: left;
-			width: 60%;
+			display: block;
 		}
 		article{
 			background: red;
@@ -58,6 +56,30 @@
 		}
 		*{
 			box-sizing: border-box;
+		}
+		@media screen and (min-width: 768px){
+		 /*aqui inician los estilos de tablet*/
+		
+        nav {
+        	float: left;
+        	width: 30%;
+        }
+        .contenedor {
+        	float: left;
+        	width: 65%;
+        }
+		 /*aqui terminan los estilos de tablet*/
+		}
+
+		@media screen and (min-width: 1024px){
+		 /*aqui inician los estilos de laptop*/
+        .contenedor {
+        	width: 66%;
+        	}
+        	h1 {
+        		font-size: 48px;
+        	}
+		 /*aqui terminan los estilos de laptop*/
 		}
 
 
