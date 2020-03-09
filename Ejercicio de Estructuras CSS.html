@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	</head>
 	<body><header>
-		<h1>Estructura Float</h1>
+		<h1>Layout con Inline</h1>
 	</header>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width-device-width">
@@ -50,13 +50,7 @@
 			width: 100%;
 			margin: 0;
 		}
-		.clearfix{
-			overflow: auto;
-
-		}
-		.after-box {
-			clear: both;
-		}
+		
 		*{
 			box-sizing: border-box;
 		}
@@ -64,11 +58,13 @@
 		 /*aqui inician los estilos de tablet*/
 		
         nav {
-        	float: left;
-        	width: 30%;
+        	display: inline-block;
+        	vertical-align: top;
+        	width: 30%
         }
         .contenedor {
-        	float: left;
+        	display: inline-block;
+        	vertical-align: top;
         	width: 65%;
         }
 		 /*aqui terminan los estilos de tablet*/
@@ -87,7 +83,7 @@
 
 
 	</style>
-	<section class="clearfix">
+	
 		<nav><ul>
 			<li>INICIO</li>
 			<li>NOSOTROS</li>
