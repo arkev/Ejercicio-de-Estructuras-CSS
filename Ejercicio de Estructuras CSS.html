@@ -2,10 +2,6 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	</head>
-	<body><header>
-		<h1>Layout con Inline</h1>
-	</header>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width-device-width">
 	<style>
@@ -56,34 +52,40 @@
 		}
 		@media screen and (min-width: 768px){
 		 /*aqui inician los estilos de tablet*/
-		
         nav {
-        	display: inline-block;
-        	vertical-align: top;
-        	width: 30%
+        	width: 200px;
+        	min-width: 100px;
+        }
+
+        section{
+        	display: flex;
         }
         .contenedor {
-        	display: inline-block;
-        	vertical-align: top;
-        	width: 65%;
+        	flex: 1;
         }
 		 /*aqui terminan los estilos de tablet*/
 		}
 
 		@media screen and (min-width: 1024px){
 		 /*aqui inician los estilos de laptop*/
-        .contenedor {
-        	width: 66%;
-        	}
+ 
         	h1 {
         		font-size: 48px;
+        	}
+
+        	nav{
+        		width: 300px;
         	}
 		 /*aqui terminan los estilos de laptop*/
 		}
 
 
 	</style>
-	
+	</head>
+	<body><header>
+		<h1>Layout con flexbox</h1>
+	</header>
+	<section>
 		<nav><ul>
 			<li>INICIO</li>
 			<li>NOSOTROS</li>
